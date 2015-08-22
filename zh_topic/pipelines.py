@@ -15,7 +15,7 @@ class TopicPipeline(object):
     def process_item(self, item, topic):
         t_url = item['url'][0]
         t_name = item['topic_name']
-        conn = MySQLdb.connect(host = 'localhost', user = 'root', passwd = 'mysqlpasswordtmac9232', db = 'scrapy')
+        conn = MySQLdb.connect(host = 'localhost', user = 'root', passwd = 'mysqlpassword', db = 'scrapy')
         cursor = conn.cursor()
 
         conn.set_character_set('utf8')
